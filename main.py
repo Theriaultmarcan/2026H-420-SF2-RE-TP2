@@ -50,6 +50,5 @@ def main() -> None:
 	print("\nGraphique pour p(x) et p'(x)...")
 	tracer_comparaison(p, -5, 5)
 
-
 if __name__ == "__main__":
 	main()

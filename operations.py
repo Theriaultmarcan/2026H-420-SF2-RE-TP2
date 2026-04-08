@@ -31,3 +31,4 @@ class Multiplication(Expression):
 
     def __str__(self) -> str:
         return f"({self.u} * {self.v})"
+    

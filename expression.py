@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 
-
 class Expression(ABC):
     """Base commune pour toutes les expressions symboliques."""
 

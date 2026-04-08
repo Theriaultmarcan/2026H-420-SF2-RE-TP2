@@ -39,3 +39,4 @@ class Polynome(Expression):
 
         if termes[0].startswith("+"):
             termes[0] = termes[0][2:] # Enlever le "+ " du premier terme
+        return " ".join(termes)

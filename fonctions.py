@@ -1,3 +1,4 @@
+import math
 from expression import Expression
 from operations import Multiplication
 
@@ -6,7 +7,6 @@ class Sin(Expression):
     def __init__(self, u: Expression) -> None:
         self.u = u
     def evaluer(self, x: float) -> float:
-        import math
         return math.sin(self.u.evaluer(x))
     def deriver(self) -> "Sin":
         return Multiplication(Cos(self.u), self.u.deriver())
@@ -17,10 +17,9 @@ class Cos(Expression):
     def __init__(self, u: Expression) -> None:
         self.u = u 
     def evaluer(self, x: float) -> float:
-        import math
         return math.cos(self.u.evaluer(x)) 
     def deriver(self) -> "Cos":
-        return Multiplication(Cos(self.u), self.u.deriver())
+        return Multiplication(-Sin(self.u), self.u.deriver())
 
 
 class Exp(Expression):
@@ -28,7 +27,6 @@ class Exp(Expression):
     def __init__(self, u: Expression) -> None:
         self.u = u
     def evaluer(self, x: float) -> float:
-        import math
         return math.exp(self.u.evaluer(x))
     def deriver(self) -> "Exp":
         return Multiplication(Exp(self.u), self.u.deriver())
