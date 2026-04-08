@@ -40,7 +40,7 @@ def main() -> None:
 	f = Polynome([1, 2, 3])  # 3x^2 + 2x + 1
 	g = Sin(x)  # sin(x)
 	h = Exp(Polynome([1, 2]))  # exp(2x + 1)
-	p = Multiplication(Polynome([1, 0, 1]), Sin(x))  # (x^2 + 1) * sin(x)
+	p = Multiplication(Polynome([1, 0, 1]), Sin(x))   # (x^2 + 1) * sin(x)
 
 	afficher_resultat("Polynome f", f, x_test=2.0)
 	afficher_resultat("Sinus g", g, x_test=0.0)

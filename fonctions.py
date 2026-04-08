@@ -1,7 +1,6 @@
 from expression import Expression
 from operations import Multiplication
 
-
 class Sin(Expression):
     """Expression representant sin(u)."""
     def __init__(self, u: Expression) -> None:

@@ -1,6 +1,5 @@
 from expression import Expression
 
-
 class Addition(Expression):
     """Expression representant u + v."""
     def __init__(self, u: Expression, v: Expression) -> None:
