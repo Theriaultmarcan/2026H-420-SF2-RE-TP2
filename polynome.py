@@ -12,7 +12,7 @@ class Polynome(Expression):
 
     def deriver(self) -> "Polynome":
         if len(self.coefficients) <= 1:
-            return Polynome([0])  # La derivee d'une constante est 0
+            return Polynome([0])   # La derivee d'une constante est 0
         derivee_coeffs = [i * a for i, a in enumerate(self.coefficients)][1:]
         return Polynome(derivee_coeffs)
 
